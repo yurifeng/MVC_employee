@@ -1,0 +1,67 @@
+﻿@using WebApplication1.ViewModels
+@model EmployeeListViewModel
+
+@{
+    /**/
+
+    ViewBag.Title = "GetView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetView</h2>
+
+<div>
+
+    @*@{ Employee em = (Employee)ViewData["Employee"]; }*@
+
+    @*<b>Employee Details</b><br />
+        Employee Name:@em.FirstName @em.LastName<br />*@
+    @*Employee Salary:@em.Salary.ToString("C")*@
+
+    @*@if (em.Salary > 15000)
+        {
+            <span style="background-color: yellow">
+                Employee Salary:@em.Salary.ToString("C")
+            </span>
+        }
+        else if (em.Salary < 15000)
+        {
+            <span style="background-color: red">
+                Employee Salary:@em.Salary.ToString("C")
+            </span>
+        }*@
+
+
+
+    @*Hello @Model.UserName
+        <hr />
+        <div>
+            <b>Employee Details</b><br />
+            Employee Name:@Model.EmployeeName<br />
+            <span style="background-color: @Model.SalaryColor">
+                Employee Salary:@Model.Salary
+            </span>
+        </div>*@
+
+    <div>
+        Hello, @Model.UserName
+        <hr />
+        <div>
+            <table style="align-content: center">
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Salary</th>
+                </tr>
+                @foreach (EmployeeViewModel iteModel in Model.Employees)
+                {
+                    <tr>
+                        <td>@iteModel.EmployeeName</td>
+                        <td style="background-color: @iteModel.SalaryColor">@iteModel.Salary</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+
+</div>
