@@ -8,10 +8,10 @@ namespace WebApplication1.Controllers
     public class EmployeeController : Controller
     {
         // GET: Employee
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
+        public ActionResult Index()
+        {
+            return View();
+        }
 
         /// <summary>
         /// GetView
